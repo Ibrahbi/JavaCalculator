@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -33,10 +32,30 @@ public class Main {
             else if (choice == 2) {}
 
             // 3. Multiplication
-            else if (choice == 3) {}
+            else if (choice == 3) {
+                System.out.println("\n--- MULTIPLICATION ---");
+                System.out.print("Enter the first number: ");
+                int num1 = sc.nextInt();
+                System.out.print("Enter the Second number: ");
+                int num2 = sc.nextInt();
+                System.out.println("The product of " + num1 + " X " +  num2 + " = " + num1 * num2);
+            }
 
             // 4. Division
-            else if (choice == 4) {}
+            else if (choice == 4) {
+                System.out.println("\n--- DIVISION ---");
+                System.out.print("Enter first number: ");
+                int num40 = sc.nextInt();
+                System.out.print("Enter second number: ");
+                int num50 = sc.nextInt();
+                if (num50 == 0) {
+                    System.out.println("Error: Cannot divide by zero.");
+                }
+                else {
+                    double result = (double) num40 / num50;
+                    System.out.println("✅ " + num40 + " ÷ " + num50 + " = " + result);
+                }
+            }
 
             // 5. Modulus
             else if (choice == 5) {}
@@ -52,6 +71,7 @@ public class Main {
 
             // 9. Factorial
             else if (choice == 9) {
+                System.out.println("\n--- Factorial ---");
                 System.out.print("Enter a non-negative integer: ");
                 int num = sc.nextInt();
                 // Factorial
@@ -69,6 +89,7 @@ public class Main {
 
             // 10. Even / Odd Check
             else if (choice == 10) {
+                System.out.println("\n--- Even / Odd Check ---");
                 System.out.print("Enter a number: ");
                 int number = sc.nextInt();
                 if (number % 2 == 0) {
@@ -114,5 +135,17 @@ public class Main {
                 System.out.println("⚠\uFE0F Invalid choice. Please enter a number between 0 and 18.\n");
             }
         }
+
+        // =========== Multiplication & Division =============
+
+
+
+
+        // ================= DIVISION =================
+
+
+
+        sc.close();
+
     }
 }
