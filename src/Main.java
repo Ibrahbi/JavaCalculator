@@ -4,13 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean running = true;
-
-
         while (running) {
             System.out.println("╔══════════════════════════════╗\n"
                              + "║    \uD83E\uDDEE CLI Java Calculator    ║\n"
                              + "╚══════════════════════════════╝");
-
             System.out.println("1.  Addition              10. Even / Odd Check\n"
                     + "2.  Subtraction           11. Reverse a Number\n"
                     + "3.  Multiplication        12. Palindrome Check\n"
@@ -21,16 +18,29 @@ public class Main {
                     + "8.  Square Root           17. Number Staircase Pattern\n"
                     + "9.  Factorial             18. Multiplication Table\n"
                     + "0.  Exit");
-
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
 // ---------------------------------------------------------------------------------------------------------------------
             // 1. Addition
             if (choice == 1) {
+                System.out.println("\n--- Addition ---");
+                int addition = 0;
+                System.out.println("please enter 2 numbers: ");
+                int firstNumber = sc.nextInt();
+                int secondNumber = sc.nextInt();
+                addition = firstNumber + secondNumber;
+                System.out.printf("the sum of %s and %s is %s", firstNumber , secondNumber, addition);
             }
 // ---------------------------------------------------------------------------------------------------------------------
             // 2. Subtraction
             else if (choice == 2) {
+                System.out.println("\n--- Subtraction ---");
+                int subtraction = 0;
+                System.out.println("please enter 2 numbers: ");
+                int firstNumber = sc.nextInt();
+                int secondNumber = sc.nextInt();
+                subtraction = firstNumber - secondNumber;
+                System.out.printf("\nthe differene of %d and %d is %s", firstNumber, secondNumber, subtraction);
             }
 // ---------------------------------------------------------------------------------------------------------------------
             // 3. Multiplication
@@ -200,27 +210,16 @@ public class Main {
                 System.out.println("\n--- Triangle Pattern ---");
                 System.out.print("Please enter the number of rows: ");
                 int userRows = sc.nextInt();
-                for (int i = 1; i <= 5; i++) {
-                    System.out.println("i = " + i);
-                    if (userRows <= 0) {
-                        System.out.println("Error, entered number is negative ");
-                    } else {
-                        System.out.println("--- TRIANGLE PATTERN ---");
-                        for (int rows = 1; rows <= userRows; rows++) {
-                            for (int repeatRow = 1; repeatRow <= rows; repeatRow++) {
-                                System.out.print("* ");
-                            }
-                            System.out.println();
-                        }
 
-                        System.out.println("--- INVERTED TRIANGLE PATTERN ---");
-                        for (int rows = userRows; rows >= 1; rows--) {
-                            for (int repeatRow = 1; repeatRow <= rows; repeatRow++) {
-                                System.out.print("* ");
-                            }
-                            System.out.println();
+                if (userRows <= 0) {
+                    System.out.println("Error, entered number is negative ");
+                }
+                else {
+                    for (int rows = 1; rows <= userRows; rows++) {
+                        for (int repeatRow = 1; repeatRow <= rows; repeatRow++) {
+                            System.out.print("* ");
                         }
-
+                        System.out.println();
                     }
                 }
             }
@@ -230,28 +229,22 @@ public class Main {
                 System.out.println("\n--- Triangle Pattern ---");
                 System.out.print("Please enter the number of rows: ");
                 int userRows = sc.nextInt();
-                for (int i = 1; i <= 5; i++) {
-                    System.out.println("i = " + i);
                     if (userRows <= 0) {
                         System.out.println("Error, entered number is negative ");
                     }
-                    System.out.println("--- INVERTED TRIANGLE PATTERN ---");
-                    for (int rows = userRows; rows >= 1; rows--) {
-                        for (int repeatRow = 1; repeatRow <= rows; repeatRow++) {
-                            System.out.print("* ");
-                        }
-                        System.out.println();
+                for (int rows = userRows; rows >= 1; rows--) {
+                    for (int repeatRow = 1; repeatRow <= rows; repeatRow++) {
+                        System.out.print("* ");
                     }
+                    System.out.println();
                 }
             }
 // ---------------------------------------------------------------------------------------------------------------------
             // 17.Number Staircase Pattern
-            else if (choice == 17) {
-            }
+            else if (choice == 17) {}
 // ---------------------------------------------------------------------------------------------------------------------
             // 18. Multiplication Table
-            else if (choice == 18) {
-            }
+            else if (choice == 18) {}
 // ---------------------------------------------------------------------------------------------------------------------
             // 0. Exit
             else if (choice == 0) {
