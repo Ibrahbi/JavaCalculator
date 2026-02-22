@@ -135,17 +135,5 @@ public class Main {
                 System.out.println("⚠\uFE0F Invalid choice. Please enter a number between 0 and 18.\n");
             }
         }
-
-        // =========== Multiplication & Division =============
-
-
-
-
-        // ================= DIVISION =================
-
-
-
-        sc.close();
-
     }
 }
