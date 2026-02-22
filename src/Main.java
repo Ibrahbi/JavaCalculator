@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//================================ hk start
+//================================ hk start  TASK 8
         Scanner sc = new Scanner(System.in);
 
         System.out.println("--- SUM OF DIGITS ---");
