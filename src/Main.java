@@ -5,26 +5,114 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a non-negative integer: ");
-        int num = sc.nextInt();
-        // Factorial
-        if (num < 0) {
-            System.out.println("Factorial not defined for negative.");
-        }
-        else {
-            int result = 1;
-            for (int i = 1; i <= num; i++) {
-                result = result * i;
-            }
-            System.out.println("Factorial of " + num + " = " + result);
-        }
+        boolean running = true;
 
-        // Even/Odd Check
-        System.out.print("Enter a number: ");
-        int number = sc.nextInt();
-        if (number % 2 == 0)
-            System.out.println(number + " is Even");
-        else
-            System.out.println(number + " is Odd");
+        while (running) {
+            System.out.println("╔══════════════════════════════╗\n"
+                             + "║    \uD83E\uDDEE CLI Java Calculator    ║\n"
+                             + "╚══════════════════════════════╝");
+
+            System.out.println("1.  Addition              10. Even / Odd Check\n"
+                    + "2.  Subtraction           11. Reverse a Number\n"
+                    + "3.  Multiplication        12. Palindrome Check\n"
+                    + "4.  Division              13. Sum of Digits\n"
+                    + "5.  Modulus               14. Count Digits\n"
+                    + "6.  Absolute Value        15. Triangle Pattern\n"
+                    + "7.  Power                 16. Inverted Triangle Pattern\n"
+                    + "8.  Square Root           17. Number Staircase Pattern\n"
+                    + "9.  Factorial             18. Multiplication Table\n"
+                    + "0.  Exit");
+
+            System.out.print("Enter your choice: ");
+            int choice = sc.nextInt();
+
+            // 1. Addition
+            if (choice == 1) {}
+
+            // 2. Subtraction
+            else if (choice == 2) {}
+
+            // 3. Multiplication
+            else if (choice == 3) {}
+
+            // 4. Division
+            else if (choice == 4) {}
+
+            // 5. Modulus
+            else if (choice == 5) {}
+
+            // 6. Absolute Value
+            else if (choice == 6) {}
+
+            // 7. Power
+            else if (choice == 7) {}
+
+            // 8. Square Root
+            else if (choice == 8) {}
+
+            // 9. Factorial
+            else if (choice == 9) {
+                System.out.print("Enter a non-negative integer: ");
+                int num = sc.nextInt();
+                // Factorial
+                if (num < 0) {
+                    System.out.println("Factorial not defined for negative.");
+                }
+                else {
+                    int result = 1;
+                    for (int i = 1; i <= num; i++) {
+                        result = result * i;
+                    }
+                    System.out.println("Factorial of " + num + " = " + result);
+                }
+            }
+
+            // 10. Even / Odd Check
+            else if (choice == 10) {
+                System.out.print("Enter a number: ");
+                int number = sc.nextInt();
+                if (number % 2 == 0) {
+                    System.out.println(number + " is Even");
+                }
+                else {
+                    System.out.println(number + " is Odd");
+                    }
+            }
+
+            // 11. Reverse a Number
+            else if (choice == 11) {}
+
+            // 12. Palindrome Check
+            else if (choice == 12) {}
+
+            // 13. Sum of Digits
+            else if (choice == 13) {}
+
+            // 14. Count Digits
+            else if (choice == 14) {}
+
+            // 15. Triangle Pattern
+            else if (choice == 15) {}
+
+            // 16. Inverted Triangle Pattern
+            else if (choice == 16) {}
+
+            // 17.Number Staircase Pattern
+            else if (choice == 17) {}
+
+            // 18. Multiplication Table
+            else if (choice == 18) {}
+
+            // 0. Exit
+            else if (choice == 0) {
+                System.out.println("\uD83D\uDC4B Goodbye! Thanks for using the calculator.\n");
+                running = false;
+            }
+
+            // Invalid choice
+            else {
+                System.out.println("⚠\uFE0F Invalid choice. Please enter a number between 0 and 18.\n");
+            }
+        }
     }
 }
